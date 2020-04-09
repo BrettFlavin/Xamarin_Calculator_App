@@ -1,22 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
              x:Class="Calculator.CalculatorPage"
              Title = "Simple Calculator">
 
-    <!-- Define StaticResource Style for Buttons -->
+    <!-- Resource Dictionary for Buttons -->
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Style x:Key="buttonStyle" TargetType="Button">
+            <Style x:Key="DigitButtonStyle" TargetType="Button">
                 <Setter Property="WidthRequest" Value="60"/>
                 <Setter Property="HeightRequest" Value="60"/>
-                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="CornerRadius" Value="25"/>
                 <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="DarkGray"/>
                 <Setter Property="FontSize" Value="36"/>
-            </Style>            
+            </Style>
+            <Style x:Key="OperatorButtonStyle" TargetType="Button">
+                <Setter Property="WidthRequest" Value="60"/>
+                <Setter Property="HeightRequest" Value="60"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="TextColor" Value="WhiteSmoke"/>
+                <Setter Property="BackgroundColor" Value="DarkOrange"/>
+                <Setter Property="FontSize" Value="36"/>
+                <Setter Property="IsEnabled" Value="False"/>
+            </Style>
         </ResourceDictionary>        
     </ContentPage.Resources>
     
@@ -42,34 +49,34 @@
         <Label x:Name="displayLabel" Text="0" Grid.ColumnSpan="4" BackgroundColor="Black" TextColor="White" FontSize="48" HorizontalTextAlignment="End" VerticalTextAlignment="Center" LineBreakMode="NoWrap"/>
 
         <!-- Row 1: Clear, Delete, Mod, Divide Buttons -->
-        <Button x:Name="clearButton" Text="C" BackgroundColor="Goldenrod" Grid.Row="1" Grid.Column="0" Style="{StaticResource buttonStyle}" Clicked="OnClearButton_Clicked" IsEnabled="False"/>
-        <Button x:Name="deleteButton" Text="Del" FontSize="32" BackgroundColor="Goldenrod" Grid.Row="1" Grid.Column="1" Style="{StaticResource buttonStyle}" Clicked="OnDeleteButton_Clicked" IsEnabled="False"/>
-        <Button x:Name="modButton" Text="%" BackgroundColor="Goldenrod" Grid.Row="1" Grid.Column="2" Style="{StaticResource buttonStyle}" Clicked="OnOperatorButton_Clicked" IsEnabled="False"/>
-        <Button x:Name="divideButton" Text="/" BackgroundColor="DarkOrange" Grid.Row="1" Grid.Column="3" Style="{StaticResource buttonStyle}" Clicked="OnOperatorButton_Clicked" IsEnabled="False"/>
+        <Button x:Name="clearButton" Text="C" BackgroundColor="Goldenrod" Grid.Row="1" Grid.Column="0" Style="{StaticResource OperatorButtonStyle}" Clicked="OnClearButton_Clicked" />
+        <Button x:Name="deleteButton" Text="Del" FontSize="32" BackgroundColor="Goldenrod" Grid.Row="1" Grid.Column="1" Style="{StaticResource OperatorButtonStyle}" Clicked="OnDeleteButton_Clicked" />
+        <Button x:Name="modButton" Text="%" BackgroundColor="Goldenrod" Grid.Row="1" Grid.Column="2" Style="{StaticResource OperatorButtonStyle}" Clicked="OnOperatorButton_Clicked" />
+        <Button x:Name="divideButton" Text="/" Grid.Row="1" Grid.Column="3" Style="{StaticResource OperatorButtonStyle}" Clicked="OnOperatorButton_Clicked" />
 
         <!-- Row 2: Seven, Eight, Nine, Multiply Buttons -->
-        <Button x:Name="seven" Text="7" BackgroundColor="DarkGray" Grid.Row="2" Grid.Column="0" Style="{StaticResource buttonStyle}"  Clicked="OnDigitButton_Clicked"/>
-        <Button x:Name="eight" Text="8" BackgroundColor="DarkGray" Grid.Row="2" Grid.Column="1" Style="{StaticResource buttonStyle}" Clicked="OnDigitButton_Clicked"/>
-        <Button x:Name="nine" Text="9" BackgroundColor="DarkGray" Grid.Row="2" Grid.Column="2" Style="{StaticResource buttonStyle}" Clicked="OnDigitButton_Clicked"/>
-        <Button x:Name="multiplyButton" Text="*" BackgroundColor="DarkOrange" Grid.Row="2" Grid.Column="3" Style="{StaticResource buttonStyle}" Clicked="OnOperatorButton_Clicked" IsEnabled="False"/>
+        <Button x:Name="seven" Text="7" Grid.Row="2" Grid.Column="0" Style="{StaticResource DigitButtonStyle}"  Clicked="OnDigitButton_Clicked"/>
+        <Button x:Name="eight" Text="8" Grid.Row="2" Grid.Column="1" Style="{StaticResource DigitButtonStyle}" Clicked="OnDigitButton_Clicked"/>
+        <Button x:Name="nine" Text="9"  Grid.Row="2" Grid.Column="2" Style="{StaticResource DigitButtonStyle}" Clicked="OnDigitButton_Clicked"/>
+        <Button x:Name="multiplyButton" Text="*" Grid.Row="2" Grid.Column="3" Style="{StaticResource OperatorButtonStyle}" Clicked="OnOperatorButton_Clicked" />
 
         <!-- Row 3: Four, Five, Six, Add Buttons -->
-        <Button x:Name="four" Text="4" BackgroundColor="DarkGray" Grid.Row="3" Grid.Column="0" Style="{StaticResource buttonStyle}" Clicked="OnDigitButton_Clicked"/>
-        <Button x:Name="five" Text="5" BackgroundColor="DarkGray" Grid.Row="3" Grid.Column="1" Style="{StaticResource buttonStyle}" Clicked="OnDigitButton_Clicked"/>
-        <Button x:Name="six"  Text="6" BackgroundColor="DarkGray" Grid.Row="3" Grid.Column="2" Style="{StaticResource buttonStyle}" Clicked="OnDigitButton_Clicked"/>
-        <Button x:Name="addButton" Text="+" BackgroundColor="DarkOrange" Grid.Row="3" Grid.Column="3" Style="{StaticResource buttonStyle}" Clicked="OnOperatorButton_Clicked" IsEnabled="False"/>
+        <Button x:Name="four" Text="4" Grid.Row="3" Grid.Column="0" Style="{StaticResource DigitButtonStyle}" Clicked="OnDigitButton_Clicked"/>
+        <Button x:Name="five" Text="5" Grid.Row="3" Grid.Column="1" Style="{StaticResource DigitButtonStyle}" Clicked="OnDigitButton_Clicked"/>
+        <Button x:Name="six"  Text="6" Grid.Row="3" Grid.Column="2" Style="{StaticResource DigitButtonStyle}" Clicked="OnDigitButton_Clicked"/>
+        <Button x:Name="addButton" Text="+" Grid.Row="3" Grid.Column="3" Style="{StaticResource OperatorButtonStyle}" Clicked="OnOperatorButton_Clicked" />
        
         <!-- Row 4: One, Two, Three, Subtract Buttons -->
-        <Button x:Name="one" Text="1" BackgroundColor="DarkGray" Grid.Row="4" Grid.Column="0" Style="{StaticResource buttonStyle}" Clicked="OnDigitButton_Clicked"/>
-        <Button x:Name="two" Text="2" BackgroundColor="DarkGray" Grid.Row="4" Grid.Column="1" Style="{StaticResource buttonStyle}" Clicked="OnDigitButton_Clicked"/>
-        <Button x:Name="three" Text="3" BackgroundColor="DarkGray" Grid.Row="4" Grid.Column="2" Style="{StaticResource buttonStyle}" Clicked="OnDigitButton_Clicked"/>
-        <Button x:Name="subtractButton" Text="-" BackgroundColor="DarkOrange" Grid.Row="4" Grid.Column="3" Style="{StaticResource buttonStyle}" Clicked="OnOperatorButton_Clicked" IsEnabled="False"/>
+        <Button x:Name="one" Text="1" Grid.Row="4" Grid.Column="0" Style="{StaticResource DigitButtonStyle}" Clicked="OnDigitButton_Clicked"/>
+        <Button x:Name="two" Text="2" Grid.Row="4" Grid.Column="1" Style="{StaticResource DigitButtonStyle}" Clicked="OnDigitButton_Clicked"/>
+        <Button x:Name="three" Text="3" Grid.Row="4" Grid.Column="2" Style="{StaticResource DigitButtonStyle}" Clicked="OnDigitButton_Clicked"/>
+        <Button x:Name="subtractButton" Text="-" Grid.Row="4" Grid.Column="3" Style="{StaticResource OperatorButtonStyle}" Clicked="OnOperatorButton_Clicked" />
         
         <!-- Row 5:  Negate, Zero, Decimal, Equals Buttons -->
-        <Button x:Name="negativeButton" Text="+/-" BackgroundColor="DarkGray" Grid.Row="5" Grid.Column="0" Style="{StaticResource buttonStyle}" Clicked="OnNegativeButton_Clicked" IsEnabled="False"/>
-        <Button x:Name="zero" Text="0" BackgroundColor="DarkGray"  Grid.Row="5" Grid.Column="1" Style="{StaticResource buttonStyle}" Clicked="OnDigitButton_Clicked"/>
-        <Button x:Name="decimalButton" Text="." BackgroundColor="DarkGray" Grid.Row="5" Grid.Column="2" Style="{StaticResource buttonStyle}" Clicked="OnDecimalButton_Clicked"/>
-        <Button x:Name="equalsButton" Text="=" BackgroundColor="DarkOrange" Grid.Row="5" Grid.Column="3" Style="{StaticResource buttonStyle}" Clicked="OnEqualsButton_Clicked" IsEnabled="False"/>
+        <Button x:Name="negativeButton" Text="+/-" Grid.Row="5" Grid.Column="0" Style="{StaticResource DigitButtonStyle}" Clicked="OnNegativeButton_Clicked" />
+        <Button x:Name="zero" Text="0" Grid.Row="5" Grid.Column="1" Style="{StaticResource DigitButtonStyle}" Clicked="OnDigitButton_Clicked"/>
+        <Button x:Name="decimalButton" Text="." Grid.Row="5" Grid.Column="2" Style="{StaticResource DigitButtonStyle}" Clicked="OnDecimalButton_Clicked"/>
+        <Button x:Name="equalsButton" Text="=" Grid.Row="5" Grid.Column="3" Style="{StaticResource OperatorButtonStyle}" Clicked="OnEqualsButton_Clicked" />
     </Grid>
    
 </ContentPage>

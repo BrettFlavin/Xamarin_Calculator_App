@@ -8,7 +8,6 @@ using Xamarin.Forms;
 
 namespace Calculator
 {    
-    [DesignTimeVisible(false)]
     public partial class CalculatorPage : ContentPage
     {
         string theOperator;         // represents an operation to perform on 2 numbers  
@@ -45,7 +44,7 @@ namespace Calculator
             if (double.TryParse(this.displayLabel.Text, out double number))
             {
                 // set the first number
-                if(currentState == 1)
+                if (currentState == 1)
                 {
                     firstNum = number;
                 }
@@ -98,16 +97,16 @@ namespace Calculator
         // called whenever the delete button is pressed to delete last number
         private void OnDeleteButton_Clicked(object sender, EventArgs e)
         {
-            // update the display
-            string display = this.displayLabel.Text;
-            this.displayLabel.Text = display.Substring(0, display.Length - 1);
-
             // keep buttons enabled only while numbers are still left on the display
-            if (this.displayLabel.Text == " ")
+            if (displayLabel.Text.Length == 1)
             {
                 disableButtons();
-                this.displayLabel.Text = "0";
-            }       
+                displayLabel.Text = "0";
+            }
+            else
+            {
+                displayLabel.Text = displayLabel.Text.Substring(0, displayLabel.Text.Length - 1);
+            }           
         }
 
         // called whenever the equals button is pressed to perform the calculation     
@@ -137,7 +136,7 @@ namespace Calculator
             // convert the string representation of a number to a double
             double.TryParse(this.displayLabel.Text, out double number);            
             
-            // update the stored number
+            // update the number
             if (number == firstNum)
                 firstNum *= -1;
             else
