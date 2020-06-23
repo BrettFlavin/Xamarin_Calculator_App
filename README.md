@@ -19,8 +19,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/BrettFlavin/Xamarin_Calculator_App/images">
-    <img src="screenshot1.PNG" alt="screenshot" width="180" height="180">
+  <a href="https://github.com/BrettFlavin/Xamarin_Calculator_App/">
+    <img src="https://github.com/BrettFlavin/Xamarin_Calculator_App/blob/master/images/screenshot1.PNG" alt="screenshot" width="180" height="180">
   </a>
 
   <h3 align="center">README</h3>
@@ -73,8 +73,11 @@ This application was created in Visual Studio 2019 using Xamarin.Forms to target
 
 Here are some example screenshots of the application running on an Android device:
 
+**Example**
 ![Calculator screenshot2](https://github.com/BrettFlavin/Xamarin_Calculator_App/blob/master/images/screenshot2.gif)
 
+
+**Example**
 ![Calculator screenshot3](https://github.com/BrettFlavin/Xamarin_Calculator_App/blob/master/images/screenshot3.gif)
 
 
