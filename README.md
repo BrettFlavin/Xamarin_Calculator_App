@@ -19,7 +19,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
- ![Calculator screenshot1](https://github.com/BrettFlavin/Xamarin_Calculator_App/blob/master/images/screenshot1.PNG)
+  <a href="https://github.com/BrettFlavin/Xamarin_Calculator_App">
+    <img src="https://github.com/BrettFlavin/Xamarin_Calculator_App/blob/master/images/screenshot1.PNG" alt="Logo">
+  </a>
 
   <h3 align="center">README</h3>
 
@@ -75,6 +77,7 @@ Here are some example screenshots of the application running on an Android devic
 
 
 ![Calculator screenshot2](https://github.com/BrettFlavin/Xamarin_Calculator_App/blob/master/images/screenshot2.gif)
+
 
 
 
