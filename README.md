@@ -18,18 +18,18 @@
 
 <!-- PROJECT LOGO -->
 <br />
+<h3>Calculator App README</h3> 
+
+<p align="center">  
+   <a href="https://github.com/BrettFlavin/Xamarin_Calculator_App/issues">Report Bug</a>
+   ·
+   <a href="https://github.com/BrettFlavin/Xamarin_Calculator_App/issues">Request Feature</a>
+</p> 
+
 <p align="center">
   <a href="https://github.com/BrettFlavin/Xamarin_Calculator_App">
     <img src="https://github.com/BrettFlavin/Xamarin_Calculator_App/blob/master/images/screenshot1.PNG" alt="Logo">
-  </a>
-
-  <h3 align="center">README</h3>
-
-  <p align="center">    
-    <a href="https://github.com/BrettFlavin/Xamarin_Calculator_App/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/BrettFlavin/Xamarin_Calculator_App/issues">Request Feature</a>
-  </p>
+  </a> 
 </p>
 
 
