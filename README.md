@@ -20,7 +20,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/BrettFlavin/Xamarin_Calculator_App/images">
-    <img src="screenshot1.png" alt="screenshot" width="180" height="180">
+    <img src="screenshot1.PNG" alt="screenshot" width="180" height="180">
   </a>
 
   <h3 align="center">README</h3>
@@ -53,7 +53,7 @@
 
 This was my first project using Xamarin.Forms to create a mobile Android and iOS app - a calculator that performs basic arithmetic operations.
 
-![Calculator screenshot1](https://github.com/BrettFlavin/Xamarin_Calculator_App/blob/master/images/screenshot1.png)
+![Calculator screenshot1](https://github.com/BrettFlavin/Xamarin_Calculator_App/blob/master/images/screenshot1.PNG)
 
 
 <!-- BUILT WITH -->
