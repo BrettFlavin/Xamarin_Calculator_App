@@ -18,7 +18,7 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<h3>Calculator App README</h3> 
+<h3 align="center">Calculator App README</h3> 
 
 <p align="center">  
    <a href="https://github.com/BrettFlavin/Xamarin_Calculator_App/issues">Report Bug</a>
@@ -143,4 +143,4 @@ Project Link: [https://github.com/BrettFlavin/Xamarin_Calculator_App](https://gi
 [issues-shield]: https://img.shields.io/github/issues/BrettFlavin/Xamarin_Calculator_App?style=plastic
 [issues-url]: https://github.com/BrettFlavin/Xamarin_Calculator_App/issues
 [license-shield]: https://img.shields.io/github/license/BrettFlavin/Xamarin_Calculator_App.svg?style=plastic
-[license-url]: https://github.com/BrettFlavin/Xamarin_Calculator_App/LICENSE.txt
+[license-url]: https://github.com/BrettFlavin/Xamarin_Calculator_App/blob/master/LICENSE.txt
