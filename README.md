@@ -18,7 +18,7 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<h3 align="center">Calculator App README</h3> 
+<h3 align="center">Calculator App for Android and iOS</h3> 
 
 <p align="center">  
    <a href="https://github.com/BrettFlavin/Xamarin_Calculator_App/issues">Report Bug</a>
